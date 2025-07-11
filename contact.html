@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nick Whittaker Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/NWP-logo.svg" alt="Nick Whittaker Photography" class="logo">
+        </a>
+
+        <button class="dropdown-toggle" aria-label="Open navigation" aria-expanded="false">&#9660;</button>
+
+
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <h2 class="page-title">Let's Connect</h2>
+        <p class="page-desc">
+            I'd love to hear about your event or project.<br>
+            Fill out the form and I'll get back to you soon!
+        </p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        
+        <div id="form-status"></div> <!-- For success/error messages -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nick Whittaker Photography</p>
+        <p class="footer-note">
+            I learned to code to build this website myself!
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init({
+                publicKey: "t0ARY1rtsCGDsIdhN", // Replace with your actual public key
+            });
+        })();
+
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        document.getElementById('form-status').innerText = "Message sent! I'll get back to you soon.";
+                        document.getElementById('contact-form').reset();
+                    }, (error) => {
+                        document.getElementById('form-status').innerText = "Oops, something went wrong. Please try again.";
+                    });
+            });
+        }
+    </script>
+
+
+</body>
+</html>
