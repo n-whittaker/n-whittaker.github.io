@@ -67,7 +67,11 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Nick Whittaker Photography</p>
+        <p>&copy; <span id="year"></span> Nick Whittaker Photography</p>
+
+        <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
         <p class="footer-note">I made this website myself while learning to code!</p>
     </footer>
 </body>
