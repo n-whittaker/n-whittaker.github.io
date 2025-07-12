@@ -300,7 +300,17 @@ main {
 .about-brief {
   width: 100%;
   margin: 0 auto 0rem auto;
-  padding: 0rem 0 0rem 0;
+  padding: 3rem 0 3rem 0;
+  background: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-brief-services {
+  width: 100%;
+  margin: 0 auto 0rem auto;
+ 
   background: var(--card-bg);
   display: flex;
   justify-content: center;
@@ -310,14 +320,13 @@ main {
 .about-brief-inner {
   max-width: 700px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
   text-align: justify;
 }
 
 .about-brief p {
   font-size: 1.5rem;
   color: var(--primary-color);
-  margin: 1.2rem 0;
+  margin: 0rem 0;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -329,8 +338,12 @@ main {
 }
 
 @media (max-width: 700px) {
+  .about-brief {
+    padding: 2rem 0 0rem 0 !important;
+  }
+
   .about-brief-inner {
-    padding: 0 0.5rem;
+    padding: 0rem 0.5rem;
   }
   .about-brief p {
     font-size: 1.05rem;
@@ -344,6 +357,8 @@ main {
   .contact-page p {
     font-size: 1.05rem;
   }
+
+  
 }
 
 /* Contact Form */
