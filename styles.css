@@ -4,12 +4,12 @@
   --secondary-color: #5a5a5a;     /* Secondary color (dark gray) */
   --accent-color: rgb(255, 255, 255);        /* Accent color (dark-gold) */
   --dark-accent-color: rgb(205, 202, 178);        /* Accent color (dark-gold) */
-  --dark-gold: #ffdd54;
+  --dark-gold: #1f75ff;
   --text-color: #333333;          /* Default text color */
-  --light-text: #caaf42c5;          /* Light text (for dark backgrounds) */
-  --lightest-text: #333;
-  --background: #FCFCF9;          /* Page background */
-  --card-bg: #FCFCF9;            /* Card/form backgrounds */
+  --light-text: #1f75ffc5;          /* Light text (for dark backgrounds) */
+  --lightest-text: #fcfcf8;
+  --background: #fcfcf8;          /* Page background */
+  --card-bg: #fcfcf8;            /* Card/form backgrounds */
   /*--border-color: #dddddd;        Borders and subtle lines */
   --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow opacity */
 }
@@ -300,7 +300,7 @@ main {
 .about-brief {
   width: 100%;
   margin: 0 auto 0rem auto;
-  padding: 2rem 0 2.5rem 0;
+  padding: 0rem 0 0rem 0;
   background: var(--card-bg);
   display: flex;
   justify-content: center;
@@ -310,8 +310,8 @@ main {
 .about-brief-inner {
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  text-align: center;
+  padding: 2rem 1.5rem;
+  text-align: justify;
 }
 
 .about-brief p {
@@ -360,6 +360,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background: var(--secondary-color);
+  color: var(--dark-gold);
 }
 
 /* Footer */
@@ -670,6 +671,8 @@ form {
   text-align: left;
   padding-left: 2.5vw;
   letter-spacing: -1px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.2);
+
 }
 
 .guarantees-grid {
@@ -715,6 +718,7 @@ form {
   font-weight: 600;
   color: var(--primary-color);
   margin: 0 0 1.1rem 0;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 
 .guarantee-item p {
@@ -723,6 +727,7 @@ form {
   margin: 0;
   line-height: 1.7;
   opacity: 0.85;
+  text-align: justify;
 }
 
 @media (max-width: 900px) {
@@ -802,15 +807,12 @@ form {
 
 .cta-section .cta-btn:hover {
   background: var(--lightest-text);
-  color: #fff;
+  
   border-color: var(--lightest-text);
 }
 
 /* Add a splash of accent color to headings, table header, and CTA button */
 
- h1, h2, h3 {
-  color: var(--dark-gold);
-}
 
 th {
   background: var(--dark-gold);
