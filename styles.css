@@ -736,6 +736,7 @@ form {
     padding-left: 0;
     text-align: center;
     padding-left: 1vw;
+    padding-top: 2rem;;
   }
   .guarantees-grid {
     grid-template-columns: 1fr;
