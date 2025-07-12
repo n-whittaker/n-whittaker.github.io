@@ -776,6 +776,7 @@ form {
   justify-content: center;
   text-align: center;
   box-sizing: border-box;
+  
 }
 
 .portfolio-cta .about-cta {
@@ -789,6 +790,8 @@ form {
   font-weight: 800;
   margin: 0 0 2.2rem 0;
   line-height: 1.18;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.2);
+
 }
 
 .cta-section .cta-btn {
